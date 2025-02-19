@@ -1,5 +1,5 @@
 import { API } from "./api.js";
-import { getFromLocal, removeFromLocal } from "./helper.js";
+import { getFromLocal } from "./helper.js";
 import {
   mainEle,
   renderTimeline,
