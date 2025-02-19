@@ -13,15 +13,6 @@ import {
 const api = new API();
 const user = getFromLocal("user");
 
-// ! Çıkış yap butonuna tıklanınca
-mainEle.logoutBtn.addEventListener("click", () => {
-  //Kullanıcı verilerini local'den kaldır
-  removeFromLocal("user");
-
-  //Kullanıcıyı login sayfasına yönlendir
-  window.location = "/auth.html";
-});
-
 // ! Kullanıcı bilgilerini render et
 document.addEventListener("DOMContentLoaded", () => {
   renderUserInfo(user);

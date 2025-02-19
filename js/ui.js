@@ -1,4 +1,5 @@
 import { formatNumber } from "./helper.js";
+import { removeFromLocal } from "./helper.js";
 
 const authEle = {
   loginForm: document.querySelector("#login"),
@@ -106,6 +107,14 @@ const renderUserInfo = (user) => {
             <span>Çıkış yap</span>
           </button>
         </div>`;
+  // Logout butonuna olay dinleyicisi ekle
+  const logoutBtn = document.querySelector("#logout-btn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      removeFromLocal("user");
+      window.location = "/auth.html";
+    });
+  }
 };
 
 // ! Tweet detay sayfasını renderlayan fonksiyon
